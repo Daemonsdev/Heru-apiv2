@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title id="page-title">Loading...</title>
+    <link rel="shortcut icon" href="https://e.top4top.io/p_3223g4qcq0.jpg"/>
+    <!-- Google Fonts for Poppins and Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/default.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .sidebar-brand-text, .card-title, .stats-title {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        .fade-out {
+            animation: fadeOut 2s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .info-box {
+            margin: 10px;
+            padding: 10px;
+            background-color: #343a40;
+            color: white;
+            border-radius: 10px; /* Added border radius */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body id="page-top" class="dark-mode fade-in">
+    <div id="wrapper">
+        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <div class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-text mx-3 text-primary-custom" id="config-name">Loading...</div>
+            </div>
+            <hr class="sidebar-divider my-0">
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                                <img class="img-profile rounded-circle" id="profile-photo" src="https://i.imgur.com/nKOjoMF.jpeg" style="width: 40px; height: 40px;">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid" id="container-wrapper">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <h6>User Agent:</h6>
+                                <p id="userAgent"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <h6>Web Uptime:</h6>
+                                <p id="uptime"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <h6>Date:</h6>
+                                <p id="currentDate"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="info-box">
+                                <h6>Ping (ms):</h6>
+                                <p id="ping"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h2 class="card-title text-primary-custom mb-4" id="welcome-title">Loading...</h2>
+                                    <p class="mb-0">Explore our APIs by clicking on the categories in the sidebar to find the one you need.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="stats-title" style="font-size: 0.8rem;">AVAILABLE ENDPOINTS</h6>
+                                    <p class="stats-value mb-0" id="totalApis" style="font-size: 1.2rem;">Loading...</p>
+                                    <i class="fas fa-server card-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="stats-title" style="font-size: 0.8rem;">CATEGORIES</h6>
+                                    <p class="stats-value mb-0" id="apiCategories" style="font-size: 1.2rem;">Loading...</p>
+                                    <i class="fas fa-list-alt card-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        Made with <i class="fa fa-heart faa-flash animated"></i> by
+                        <a href="https://www.facebook.com/jaymar.dev.00" target="_blank" style="color: #3b82f6;">Jay Mar</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/js/ruang-admin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/dono.js"></script>
+    <script>
+        document.getElementById("userAgent").textContent = navigator.userAgent;
+
+        const startTime = new Date();
+        setInterval(() => {
+            const now = new Date();
+            const uptime = new Date(now - startTime);
+            const hours = String(uptime.getUTCHours()).padStart(2, '0');
+            const minutes = String(uptime.getUTCMinutes()).padStart(2, '0');
+            const seconds = String(uptime.getUTCSeconds()).padStart(2, '0');
+            document.getElementById("uptime").textContent = `${hours}:${minutes}:${seconds}`;
+        }, 1000);
+
+        function updateDate() {
+            const date = new Date();
+            document.getElementById("currentDate").textContent = date.toLocaleString();
+        }
+        updateDate();
+        setInterval(updateDate, 1000); // Updated to run every second
+
+        function calculatePing() {
+            const startPing = Date.now();
+            fetch(window.location.href)
+                .then(() => {
+                    const ping = Date.now() - startPing;
+                    document.getElementById("ping").textContent = `${ping} ms`;
+                })
+                .catch(() => {
+                    document.getElementById("ping").textContent = "Error";
+                });
+        }
+        calculatePing();
+        setInterval(calculatePing, 1000);
+
+        function triggerFadeOut() {
+            document.body.classList.add('fade-out');
+        }
+    </script>
+</body>
+
+</html>

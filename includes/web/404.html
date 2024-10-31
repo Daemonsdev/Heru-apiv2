@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Page Not Found 404</title>
+    <meta name="description" content="404 - Page Not Found">
+    <link rel="shortcut icon" href="https://b.top4top.io/p_32233r7z40.jpg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Ubuntu, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a1a;
+            overflow: hidden;
+            color: #ffffff;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: #ff4136;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-code .eye {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .error-code .eye::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff4136;
+            top: 30%;
+            left: 30%;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 20%, 60%, 100% { transform: translateY(0); }
+            10%, 50% { transform: translateY(10px); }
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 24px;
+            animation: fadeIn 0.8s;
+        }
+        .go-back {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        .go-back a {
+            color: #ff4136;
+            text-decoration: none;
+        }
+        .go-back a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container" onclick="showMessage()">
+        <div class="error-code">
+            4<div class="eye"></div>4
+        </div>
+        <div class="status" id="message" style="display: none;">
+            Page Not Found - Tap for More Info
+        </div>
+        <div class="go-back">
+            Go back to <a href="/">Home</a>.
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": { "value": "#ffffff" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" }
+                },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": { "enable": true, "speed": 6 }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "repulse": { "distance": 100 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        function showMessage() {
+            const messageElement = document.getElementById("message");
+            if (messageElement.style.display === "none") {
+                messageElement.style.display = "block";
+                messageElement.textContent = "Hello, looks like you’re lost! This page doesn’t exist, but feel free to explore other sections.";
+            }
+        }
+    </script>
+</body>
+</html>
