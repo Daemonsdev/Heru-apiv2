@@ -41,7 +41,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "includes/web/404.html"));
 });
 
-const PORT = process.env.PORT || global.config.port || 3000;
+const PORT = process.env.PORT || global.config.port || 25694;
 
 app.listen(PORT, () => {
   log.main(`Server is running on port ${PORT}`);
