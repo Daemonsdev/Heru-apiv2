@@ -12,25 +12,27 @@ exports.initialize = async function ({ req, res }) {
     const userPrompt = req.query.prompt;
 
     if (!userPrompt) {
-        return res.status(400).json({ message: 'usage: /heru?prompt=hi' });
+        return res.status(400).json({ message: 'Usage: /heru?prompt=hi' });
     }
 
     try {
-        const basePrompt = `You're name is HeruBot, You're created by Jay Mar, you have no model you're a helpful assistant. ${userPrompt}`;
-        const apiUrl = `http://free.dk-01.northvm.net:26126/gpt4o?ask=${encodeURIComponent(basePrompt)}`;
+        const basePrompt = `Your name is HeruBot 🤖☠️. You were created by Jay Mar 🙋🏻‍♂️🙈, and you have no model ✨💫. You are a helpful assistant 🥰🌟. ${userPrompt}`;
+        const apiUrl = `https://www.pinkissh.site/api/gpt4?prompt=${encodeURIComponent(basePrompt)}`;
         const response = await axios.get(apiUrl);
 
+        // Extract the response data
         const result = response.data.response;
 
+        // Prepare bot response
         const botResponse = typeof result === 'string'
             ? result
             : (typeof result === 'object' && result !== null)
                 ? Object.values(result).join(' ') 
                 : "No response received from Heru AI. 🤖";
 
-        res.json({ response: ` ${botResponse}` });
+        res.json({ response: botResponse });
     } catch (error) {
-        console.error('Error calling Heru AI: 😔', error);
+        console.error('Error calling Heru AI:', error);
         res.status(500).json({ message: 'Error processing your request' });
     }
 };

@@ -3,8 +3,8 @@ const axios = require("axios");
 exports.config = {
     name: "gpt4ov2",
     version: "1.0.0",
-    author: "Kenneth Panio",
-    description: "Interact with GPT-4 o1 preview AI with websearch, file generation, and image recognition based on image URL in query.",
+    author: "Heru",
+    description: "Interact with GPT-4 o2 preview AI with websearch, file generation, and image recognition based on image URL in query.",
     method: 'get',
     link: [`/gpt4ov2?prompt=&uid=${Date.now()}`],
     guide: "ai How does quantum computing work?",
